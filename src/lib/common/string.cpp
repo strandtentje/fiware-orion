@@ -27,6 +27,7 @@
 #include <string.h>
 #include <string>
 #include <vector>
+#include <boost/algorithm/string.hpp>
 
 #include "common/string.h"
 #include "common/wsStrip.h"
@@ -673,4 +674,38 @@ void strReplace(char* to, int toLen, const char* from, const char* oldString, co
   }
 
   to[toIx] = 0;
+}
+
+
+
+/* ****************************************************************************
+*
+* strEscapeChars -
+*/
+std::string strEscapeChars(Format format, const std::string& str)
+{
+  switch (format)
+  {
+  case JSON:
+
+    break;
+
+  default:
+    //   < &lt;
+    //   > &gt;
+    //   & &amp;
+    //   " &quot;
+    //   ' &apos;
+    boost::replace_all(str, "&",  "&amp");
+    boost::replace_all(str, "<",  "&lt");
+    boost::replace_all(str, ">",  "&gt");
+    boost::replace_all(str, "\"", "&quot");
+    boost::replace_all(str, "'",  "&apos");
+
+
+
+    break;
+  }
+
+  return "";
 }

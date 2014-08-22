@@ -28,7 +28,7 @@
 #include <string>
 #include <vector>
 
-
+#include "common/Format.h"
 
 /* ****************************************************************************
 *
@@ -140,7 +140,7 @@ extern char* strToLower(char* to, const char* from, int toSize);
 
 /* ****************************************************************************
 *
-* strReplace - 
+* strReplace -
 */
 extern void strReplace
 (
@@ -150,5 +150,13 @@ extern void strReplace
   const char* newString,
   const char* oldString
 );
+
+
+
+/* ****************************************************************************
+*
+* strEscapeChars -
+*/
+extern std::string strEscapeChars(Format format, const std::string& str);
 
 #endif  // SRC_LIB_COMMON_STRING_H_
