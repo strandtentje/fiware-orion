@@ -40,6 +40,8 @@
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/foreach.hpp>
 
+#include "common/string.h"
+
 #include "logMsg/logMsg.h"
 #include "logMsg/traceLevels.h"
 
@@ -327,6 +329,9 @@ std::string jsonParse(ConnectionInfo* ciP, const char* content, const std::strin
   ptree              tree;
   ptree              subtree;
   std::string        path;
+  std::string        escapedContent;
+
+  escapedContent = strJsonEscapeChars(std::string(content));
 
   ss << content;
   read_json(ss, subtree);

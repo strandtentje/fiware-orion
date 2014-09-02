@@ -28,8 +28,6 @@
 #include <string>
 #include <vector>
 
-#include "common/Format.h"
-
 /* ****************************************************************************
 *
 * isIPv6 -
@@ -155,8 +153,8 @@ extern void strReplace
 
 /* ****************************************************************************
 *
-* strEscapeChars -
+* strJsonEscapeChars -
 */
-extern std::string strEscapeChars(Format format, const std::string& str);
+extern std::string strJsonEscapeChars(const std::string& str);
 
 #endif  // SRC_LIB_COMMON_STRING_H_

@@ -44,7 +44,7 @@ orionCurl --json --url "/ngsi10/contextEntities/Room1" --payload '{
     "attributes": [
         {
             "name": "temperature",
-            "type": "centig\rade",
+            "type": "centi\nngrade",
             "value": "30"
         }
     ]
