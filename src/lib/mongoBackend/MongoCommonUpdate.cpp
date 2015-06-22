@@ -910,8 +910,6 @@ static bool addTriggeredSubscriptions
   queryPattern.append(condValueQ, attr);
   queryPattern.append(CSUB_EXPIRATION, BSON("$gt" << (long long) getCurrentTime()));
   queryPattern.append(CSUB_SERVICE_PATH, spBson);
-  //RBL
-  //queryPattern.appendCode("$where", function);
 
   // FIXME: condTypeQ, condValueQ and servicePath part could be "factorized" out of the $or clause
   BSONObj query = BSON("$or" << BSON_ARRAY(queryNoPattern << queryPattern.obj()));
