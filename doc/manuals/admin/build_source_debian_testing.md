@@ -3,7 +3,7 @@
 Refer to build_source.md for information on building on the recommended
 distribution (CentOS 6.x.)
 
-This document outlines compilation on Debian Stretch. Using this method is not recommended or supported but may be preferable or informative.
+This document outlines compilation on Debian Stretch. Using this method is not recommended or supported but may be preferable or informative. Note that we for example ignore a bunch of warnings, which is not a particularly good practice.
 
 ## Debian Stretch (Not officially supported but otherwise a fair idea)
 
@@ -65,7 +65,7 @@ Note we instruct the build script to *not* treat warnings as errors; this legacy
         # Run this as root again:
         mv rapidjson-1.0.2/include/rapidjson/ /usr/local/include
 
-* Install Google Test/Mock from sources (there are RPM pacakges for this, but they don't seem to be working with the current CMakeLists.txt configuration)
+* Install Google Test/Mock from sources (there are RPM packages for this, but they don't seem to be working with the current CMakeLists.txt configuration)
 
         # Run these as a regular user:
         wget http://googlemock.googlecode.com/files/gmock-1.5.0.tar.bz2
