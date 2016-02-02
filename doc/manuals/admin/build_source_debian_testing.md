@@ -3,7 +3,7 @@
 Refer to build_source.md for information on building on the recommended
 distribution (CentOS 6.x.)
 
-This document outlines compilation on Debian Stretch
+This document outlines compilation on Debian Stretch. Using this method is not recommended or supported but may be preferable or informative.
 
 ## Debian Stretch (Not officially supported but otherwise a fair idea)
 
@@ -87,6 +87,8 @@ Note we instruct the build script to *not* treat warnings as errors; this legacy
         git clone https://github.com/telefonicaid/fiware-orion
         # Navigate to project tree
         cd fiware-orion/
+        # Checkout the release (at the time of writing this, 0.27.0)
+        git checkout tags/0.27.0
 
 * Alternatively, get a tarball with the code:
 
